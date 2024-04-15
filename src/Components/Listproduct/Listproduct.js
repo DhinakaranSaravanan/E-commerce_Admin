@@ -6,7 +6,7 @@ const Listproduct = () => {
   const [allproducts, setAllproducts]=useState([])
 
   const fetchInfo = async() => {
-    await fetch("http://localhost:4000/allproduct").then(e => e.json()).then(e => setAllproducts(e))
+    await fetch("https://dkshop-ecommerceapi.onrender.com/allproduct").then(e => e.json()).then(e => setAllproducts(e))
   }
   useEffect(() => {
     fetchInfo()
@@ -14,7 +14,7 @@ const Listproduct = () => {
 
   const removeProduct = async (e) => {
     console.log("id"+e);
-    await fetch('http://localhost:4000/removeproduct',{
+    await fetch('https://dkshop-ecommerceapi.onrender.com/removeproduct',{
       method:'POST',
       headers:{
         Accept:'application/json',

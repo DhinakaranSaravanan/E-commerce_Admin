@@ -25,7 +25,7 @@ const Add_Product = async () => {
    let formData = new FormData();
    formData.append('product', image)
 
-   await fetch('http://localhost:4000/upload',{
+   await fetch('https://dkshop-ecommerceapi.onrender.com/upload',{
       method:'POST',
       headers:{
          Accept:'application/json'
@@ -36,7 +36,7 @@ const Add_Product = async () => {
       product.image=responeImageURL.image_url;  
       // const jdata = JSON.stringify(productDetails)    
       // console.log(jdata);
-      await fetch('http://localhost:4000/addproduct',{
+      await fetch('https://dkshop-ecommerceapi.onrender.com/addproduct',{
          method:'POST',
          headers:{
             Accept:'application/json',
